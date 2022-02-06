@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=yes,minimal-ui">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+  <title>Libro digital interactivo</title>
+
+  <!-- configuración del libro -->
+  <script>
+  window.book_config = {
+    // parámetro que indica si los capítulos, secciones y figura se auto numeran
+    // para que los capítulos se auto numeren deben utilizar la etiqueta <h1>
+    // para que las secciones se auto numeren deben utilizar la etiqueta <h2>
+    auto_numerate_sections_and_figures: true, 
+  }
+  </script>
+
+  <!-- núcleo del libro interactivo -->
+  <link rel="stylesheet" href="css/style.css" type="text/css">
+  <script type="text/javascript" src="js/book.js" charset="utf-8"></script>
+  
+  <!-- personalización del usuario -->
+  <link rel="stylesheet" href="extra/fonts.css" type="text/css">
+  <link rel="stylesheet" href="extra/style.css" type="text/css">
+</head>
+
+<body>
+  <div id="book_loader_container"><div id="book_loader"></div></div>
+
+  <div id="book_container">
+    <div id="btn_back_page"></div>
+    <div id="btn_next_page"></div>
+    <button id="go_to_table_of_content" style="display: none;"></button>
+    
+    <button id="btn_config"></button>
+    <div id="config_options">
+      <div id="dark_light_mode"></div>
+    </div>
+
+    <!-- si este elemento no esta presente, el botón de la tabla de contenido lleva a la primera página con un elemento class="toc_link" -->
+<!--     <div id="table_of_content"></div> -->
+
+    <div id="pages_container">
+      <!--  -->
+      <div class="page" style="background-color:transparent;" num="">
+      </div>
+
+      <!--  -->
+      <div class="page invertcolor" style="margin:0; padding:0; background-size:contain; background-image:url(images/general/portada_cuento.png);" num="">
+        <div class="cover_title">"Tú, yo y los cambios"</div>
+        <div class="cover_subtitle">Laura Isabel Arango Ruiz</div>
+      </div>
+
+      <!--  -->
+      <div class="page" num="">
+        <div class="border">
+          <div class="container">
+            <div class="img_container">
+              <img src="images/general/Lectura_A4_Mesa de trabajo 1.png" style="width: 100%;">  
+            </div>
+            <div class="textContainer">
+              <p class="letraCap">Hoy estoy… Reconociendo formas en el espejo.<br>Las comparo afuera, las miro adentro, me encojo, me ensancho, cambio…</p>
+            </div>
+          </div>
+          <div class="container">
+            <div class="textContainer">
+              <p class="letraCap">Hoy estoy… Reconociendo formas en el espejo.<br>Las comparo afuera, las miro adentro, me encojo, me ensancho, cambio…</p>
+            </div>
+            <div class="img_container">
+              <img src="images/general/Lectura_A4_Mesa de trabajo 1 copia.png" style="width: 100%;">  
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--  -->
+      <!-- init-page-num="true" es un parámetro que indica que a partir de esta página comienza la numeración -->
+      <!-- inicialmente los números de las páginas se numeran con numerales romanos -->
+      <!-- num="" es un parámetro que indica que esta página no lleva numeración visible -->
+      <!--  -->
+      <div class="page" num="">
+        <div class="border">
+          <div class="container">
+            <div class="textContainer">
+              <p style="text-align: initial">Hoy no sé qué hacer…<br>¿De dónde ha salido todo este vello?, ¿qué hago con él?</p>
+            </div>
+            <div class="img_container">
+              <img src="images/general/Lectura_A4_Mesa de trabajo 1 copia 2.png" style="width: 78%;">  
+            </div>
+          </div>
+          <div class="container">
+            <div class="img_container">
+              <img src="images/general/Lectura_A4_Mesa de trabajo 1 copia 3.png" style="width: 78%;">  
+            </div>
+            <div class="textContainer">
+              <p style="text-align: initial">Hoy no sé qué hacer…<br>¿De dónde ha salido todo este vello?<br>¿a quién le presumo el que tengo en el pecho?</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--  -->
+      <div class="page" num="">
+        <div class="border">
+          <div class="container">
+            <div class="img_container">
+              <img src="images/general/Lectura_A4_Mesa de trabajo 1 copia 4.png" style="width: 78%;">  
+            </div>
+            <div class="textContainer">
+              <p style="text-align: initial">Hoy me hallo cíclica, inquieta, calmada, de subida y de bajada… y otra vez.</p>
+            </div>
+          </div>
+          <div class="container">
+            <div class="textContainer">
+              <p style="text-align: initial">Hoy me hallo diferente. Ensoñador, eufórico, apenado…</p>
+            </div>
+            <div class="img_container">
+              <img src="images/general/Lectura_A4_Mesa de trabajo 1 copia 5.png" style="width: 78%;">  
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--  -->
+      <div class="page" num="">
+        <div class="border">
+          <div class="container">
+            <div class="textContainer">
+              <p style="text-align: initial">Hoy tengo molestias inesperadas…</p>
+            </div>
+            <div class="img_container">
+              <img src="images/general/Lectura_A4_Mesa de trabajo 1 copia 6.png" style="width: 78%;">  
+            </div>
+          </div>
+          <div class="container">
+            <div class="img_container">
+              <img src="images/general/Lectura_A4_Mesa de trabajo 1 copia 7.png" style="width: 78%;">  
+            </div>
+            <div class="textContainer">
+              <p style="text-align: initial">Yo también tengo molestias inesperadas…</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="page" num="">
+        <div class="border">
+          <div class="container">
+            <div class="img_container">
+              <img src="images/general/Lectura_A4_Mesa de trabajo 1 copia 8.png" style="width: 78%;">  
+            </div>
+            <div class="textContainer">
+              <p style="text-align: initial">Hoy me siento atraída…</p>
+            </div>
+          </div>
+          <div class="container">
+            <div class="textContainer">
+              <p style="text-align: initial">Hoy me siento atraído…</p>
+            </div>
+            <div class="img_container">
+              <img src="images/general/Lectura_A4_Mesa de trabajo 1 copia 9.png" style="width: 78%;">  
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="page" num="">
+        <div class="border">
+          <div class="container">
+            <div class="textContainer">
+              <p style="text-align: initial">Hoy no me entiendo…</p>
+            </div>
+            <div class="img_container">
+              <img src="images/general/Lectura_A4_Mesa de trabajo 1 copia 10.png" style="width: 78%;">  
+            </div>
+          </div>
+          <div class="container">
+            <div class="img_container">
+              <img src="images/general/Lectura_A4_Mesa de trabajo 1 copia 11.png" style="width: 78%;">  
+            </div>
+            <div class="textContainer">
+              <p style="text-align: initial">Yo tampoco me entiendo…</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="page" num="">
+        <div class="border">
+          <div class="container">
+            <div class="img_container">
+              <img src="images/general/Lectura_A4_Mesa de trabajo 1 copia 12.png" style="width: 78%;">  
+            </div>
+            <div class="textContainer">
+              <p style="text-align: initial">Hoy necesito privacidad.</p>
+            </div>
+          </div>
+          <div class="container">
+            <div class="textContainer">
+              <p style="text-align: initial; width: 110%;">Yo igual. Necesito privacidad…</p>
+            </div>
+            <div class="img_container">
+              <img src="images/general/Lectura_A4_Mesa de trabajo 1 copia 13.png" style="width: 78%;">  
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="page" num="">
+        <div class="border">
+          <div class="container">
+            <div class="textContainer">
+              <p style="text-align: initial">Hoy quiero conocer…</p>
+            </div>
+            <div class="img_container">
+              <img src="images/general/Lectura_A4_Mesa de trabajo 1 copia 14.png" style="width: 78%;">  
+            </div>
+          </div>
+          <div class="container">
+            <div class="img_container">
+              <img src="images/general/Lectura_A4_Mesa de trabajo 1 copia 15.png" style="width: 78%;">  
+            </div>
+            <div class="textContainer">
+              <p style="text-align: initial">También quiero conocer…</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="page" num="">
+        <div class="border">
+          <div class="container">
+            <div class="img_container">
+              <img src="images/general/Lectura_A4_Mesa de trabajo 1 copia 16.png" style="width: 78%;">  
+            </div>
+            <div class="textContainer">
+              <p style="text-align: initial">Hoy tengo dudas… ¿sentimos lo mismo?</p>
+            </div>
+          </div>
+          <div class="container">
+            <div class="textContainer">
+              <p style="text-align: initial; width: 110%;">Hoy tengo dudas…<br>¿sentimos lo mismo?</p>
+            </div>
+            <div class="img_container">
+              <img src="images/general/Lectura_A4_Mesa de trabajo 1 copia 17.png" style="width: 78%;">  
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="page" num="">
+        <div class="border">
+          <div class="container">
+            <div class="textContainer">
+              <p style="text-align: initial">Hoy no encuentro qué ponerme.</p>
+            </div>
+            <div class="img_container">
+              <img src="images/general/Lectura_A4_Mesa de trabajo 1 copia 18.png" style="width: 78%;">  
+            </div>
+          </div>
+          <div class="container">
+            <div class="img_container">
+              <img src="images/general/Lectura_A4_Mesa de trabajo 1 copia 19.png" style="width: 78%;">  
+            </div>
+            <div class="textContainer">
+              <p style="text-align: initial">Hoy no encuentro qué ponerme.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="page" num="">
+        <div class="border">
+          <div style="text-align: center">
+            <img src="images/general/Lectura_A4_Mesa de trabajo 1 copia 20.png" style="width: 100%;">  
+            <p style="width: 80%; margin: 25px auto;">Muchos de estos días los tenemos, lo importante es abrazar los cambios en cada uno de ellos.</p>
+            <p style="margin: 25px 0; font-weight: bold; font-size: 40px;">¡Hoy acepto mis cambios!</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="page" num="" >
+        <div class="border">
+          <div style="position: absolute; bottom: 40px; display: grid; font-size: 12px;">
+            <span>Licencia</span>
+            <img src="images/general/by-nc-sa.svg"> 
+            <span>El contendido de esta obra esta bajo una licencia Creative Commons <br>
+              <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es">(Atribución-NoComercial-CompartirIgual).</a></span> 
+          </div>
+        </div>
+      </div>
+
+    <!-- [cierra] pages_container -->
+    </div>
+  <!-- [cierra] book_container -->
+  </div>
+
+</body>
+</html>
